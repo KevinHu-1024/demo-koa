@@ -13,8 +13,8 @@
 
 ## 3.运行环境
 
-**Comming soon**
+*Comming soon*
 
 ## 4.启动项目
 
-**Comming soon**
+*Comming soon*
