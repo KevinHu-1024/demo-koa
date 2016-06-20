@@ -1,7 +1,8 @@
 const Router = require('koa-router');
 const router = new Router();
 
-router.get('/', async function (ctx, next) {
+
+router.get('/', async (ctx, next) => {
   ctx.state = {
     title: 'koa2 title'
   };
