@@ -17,6 +17,36 @@ module.exports = (app) => {
   router.use('/', index.routes(), index.allowedMethods());
   router.use('/users', users.routes(), users.allowedMethods());
 
+  // 用户注册
+  router.post('/signup', (ctx, next) => {
+
+  })
+
+  // 用户登录
+  router.post('/signin', (ctx, next) => {
+
+  })
+
+  // 发布分享
+  router.post('/share', (ctx, next) => {
+
+  })
+
+  // 获取所有分享
+  router.get('/share', (ctx, next) => [
+
+  ])
+
+  // 作者更新分享
+  router.put('/share/:id', (ctx, next) => {
+
+  })
+
+  // 获取用户信息
+  router.get('/user/:id', (ctx, next) => {
+    
+  })
+
   app.use(router.routes(), router.allowedMethods());
   // response
 
