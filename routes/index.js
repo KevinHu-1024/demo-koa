@@ -3,10 +3,6 @@ const router = new Router();
 
 
 router.get('/', async (ctx, next) => {
-  // ctx.state = {
-  //   title: 'koa2 title'
-  // };
-
   let data = [{
     name: "huke",
     age: "25",
@@ -18,4 +14,16 @@ router.get('/', async (ctx, next) => {
     data: JSON.stringify(data)
   });
 })
+
+// 用户注册
+router.post('signup', (ctx, next) => {
+  console.log('post /siginup');
+  ctx.body = {name: 'aaa'};
+});
+
+// 用户登录
+router.post('signin', (ctx, next) => {
+  console.log('post /siginin');
+});
+
 module.exports = router;

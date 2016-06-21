@@ -3,7 +3,7 @@ const app = new Koa();
 const views = require('koa-views');
 const onerror = require('koa-onerror');
 
-const router = require('./router');
+const router = require('./common/router');
 
 // middlewares
 app.use(require('koa-static')(__dirname + '/public'));

@@ -6,8 +6,9 @@ const json = require('koa-json');
 const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
 
-const index = require('./routes/index');
-const users = require('./routes/users');
+const index = require('../routes/index');
+const user = require('../routes/user');
+const share = require('../routes/share');
 
 module.exports = (app) => {
   app.use(convert(bodyparser));
@@ -15,37 +16,8 @@ module.exports = (app) => {
   app.use(convert(logger()));
 
   router.use('/', index.routes(), index.allowedMethods());
-  router.use('/users', users.routes(), users.allowedMethods());
-
-  // 用户注册
-  router.post('/signup', (ctx, next) => {
-
-  })
-
-  // 用户登录
-  router.post('/signin', (ctx, next) => {
-
-  })
-
-  // 发布分享
-  router.post('/share', (ctx, next) => {
-
-  })
-
-  // 获取所有分享
-  router.get('/share', (ctx, next) => [
-
-  ])
-
-  // 作者更新分享
-  router.put('/share/:id', (ctx, next) => {
-
-  })
-
-  // 获取用户信息
-  router.get('/user/:id', (ctx, next) => {
-    
-  })
+  router.use('/user', user.routes(), user.allowedMethods());
+  router.use('/share', share.routes(), share.allowedMethods());
 
   app.use(router.routes(), router.allowedMethods());
   // response
@@ -54,4 +26,4 @@ module.exports = (app) => {
     console.log(err)
     logger.error('server error', err, ctx);
   });
-}
+};
