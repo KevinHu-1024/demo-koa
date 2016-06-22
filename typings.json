@@ -4,6 +4,7 @@
     "koa-bodyparser": "registry:dt/koa-bodyparser#3.0.0+20160414124440",
     "koa-json": "registry:dt/koa-json#2.0.0+20160412125208",
     "koa-router": "registry:dt/koa-router#7.0.0+20160314083221",
-    "koa-static": "registry:dt/koa-static#2.0.0+20160401073454"
+    "koa-static": "registry:dt/koa-static#2.0.0+20160401073454",
+    "mongoose": "registry:dt/mongoose#3.8.5+20160614090725"
   }
 }
