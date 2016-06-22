@@ -1,8 +1,8 @@
 const Router = require('koa-router');
 const router = new Router();
+const User = require('../models/User');
 
-
-router.get('/', async (ctx, next) => {
+router.get('/', async (ctx) => {
   let data = [{
     name: "huke",
     age: "25",
@@ -16,13 +16,38 @@ router.get('/', async (ctx, next) => {
 })
 
 // 用户注册
-router.post('signup', (ctx, next) => {
-  console.log('post /siginup');
-  ctx.body = {name: 'aaa'};
+router.post('signup',  (ctx) => {
+  console.log(1);
+  console.log(ctx.request.body);
+  let {
+    userId = '',
+    name  = '',
+    email  = '',
+    password = '',
+    userSharedIds = '',
+    userStaredIds  = '',
+    userIgnoredIds = ''
+  } = ctx.request.body;
+  let user = new User({
+    userId: userId,
+    name : name,
+    email : email,
+    password: password,
+    userSharedIds: userSharedIds,
+    userStaredIds : userStaredIds,
+    userIgnoredIds: userIgnoredIds
+  });
+  user.save(err => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log('success');
+  })
 });
 
 // 用户登录
-router.post('signin', (ctx, next) => {
+router.post('signin', (ctx) => {
   console.log('post /siginin');
 });
 

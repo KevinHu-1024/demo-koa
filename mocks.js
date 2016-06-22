@@ -41,11 +41,11 @@ exports.share = {
 
 exports.users = {
   huke: {
-    id: 123,
+    userId: 123,
     name: '胡可',
-    userSharesId: ['001'],
-    userLikedId: ['002'],
+    userSharedIds: ['001'],
+    userStareddIds: ['002'],
     // 自己不能喜欢自己的分享
-    userCanceledId: ['003, 004']
+    userIgnoredIds: ['003, 004']
   }
 };

@@ -19,11 +19,15 @@
 
 * 启动（port: 3999） `$ npm start`
 
-## 5.路由
+## 5.测试
+
+* 测试数据库功能
+
+## 6.路由
 
 Method  | Path       | Function                 |Instructions
 --------|------------|-------------------|------------
-GET     |`/`         |main page          |基于Vue的单页面应用，后台页面
+GET     |`/`         |main page          |测试页面
 GET     |`/sign`     |siginup&signin page|独立页面
 POST    |`/signup`   |user reg           |成功后页内切换至登录
 POST    |`/signin`   |user siginin       |成功后重定向至主页
