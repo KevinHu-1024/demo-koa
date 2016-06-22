@@ -16,6 +16,7 @@ db.once('open', function() {
 });
 
 // TODO: 需增加监视进程，当应用终止是关闭数据库
+// TODO: 需要增加数据库用户权限控制、只允许本地连接
 
 // middlewares
 app.use(require('koa-static')(__dirname + '/public'));
